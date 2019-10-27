@@ -1,14 +1,11 @@
 const express = require("express");
 const app = express();
 const helmet = require("helmet");
-// https://helmetjs.github.io/ - for more information on all packages and uses.
 
 app.use(helmet.dnsPrefetchControl());
+// Sets header "X-DNS-Prefetch-Control: off"
 
-// Using a helmet security package is done like above.
+// A header `X-Powered-By` is sent with every request, identifying the technology used on the server (e.g. Express).
+// This can make it easier for hackers to target vulnerabilities on your server
 
-// This package will handle DNS Prefetch Control.
-// It disables browsers from DNS prefetching by disabling 'X-DNS-Prefetch-Control' header
-// Sets "X-DNS-Prefetch-Control: off".
-
-// Use another helmet security package `hidePoweredBy`
+// Remove this header from being transmitted using the Helmet middleware `hidePoweredBy`

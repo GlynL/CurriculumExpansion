@@ -5,7 +5,6 @@ const helmet = require("helmet");
 
 app.use(helmet.dnsPrefetchControl());
 app.use(helmet.hidePoweredBy());
-// Hide Powered-By
 // Removes the 'X-Powered-By' header from requests.
 
 // Now we want a few more security features enabled.
