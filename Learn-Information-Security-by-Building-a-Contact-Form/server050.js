@@ -7,5 +7,4 @@ app.use(helmet.dnsPrefetchControl());
 app.use(helmet.hidePoweredBy());
 // Removes the 'X-Powered-By' header from requests.
 
-// Now we want a few more security features enabled.
-// Enable the `ieNoOpen`, `noSniff`, `xssFilter`, and `frameguard` features.
+// Next enable the `ieNoOpen` security feature.
