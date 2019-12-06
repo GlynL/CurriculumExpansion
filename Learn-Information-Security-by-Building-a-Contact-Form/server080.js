@@ -10,4 +10,4 @@ app.use(helmet());
 // const configObject = {}
 // app.use(helmet(configObject))
 
-// Pass in a configuration object with they key `noCache` and value `false`.
+// Pass in a configuration object (empty for now).

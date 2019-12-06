@@ -16,10 +16,13 @@ const helmetConfig = {
 
 app.use(helmet(helmetConfig));
 
-// With this Content Security Policy only allows content from the defined domains.
-// If you wanted to include Bootstrap for example. You would add `'maxcdn.bootstrapcdn.com'` to the src.
+// This helps protect your site from cross-site scripting (XSS).
+// XSS is when someone injects malicious scripts into site.
+// By enabling Content Security Policy you only allow content from the defined domains and if someone injects a malicious script the request will fail.
+// By default we are only allowing scripts from our own domain. But we can add others.
+// If you wanted to include Bootstrap, for example, you would add 'stackpath.bootstrapcdn.com' to the styleSrc array.
+// For example:
+// styleSrc: ["'self'", 'stackpath.bootstrapcdn.com']
 
-// Now we have helmet all set up and our site is much more secure.
-
-// Our server is going to be receiving a post request from a form on the front-end.
-// Configure the server to use `express.urlencoded` and `express.json`
+// Another common use is Google analytics.
+// Add the domain 'www.google-analytics.co' to `scriptSrc`

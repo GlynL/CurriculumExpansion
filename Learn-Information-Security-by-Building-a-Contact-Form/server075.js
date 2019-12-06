@@ -14,7 +14,7 @@ app.use(
     maxAge: 5184000 /* 60 days in seconds */
   })
 );
-// HSTS sets the 'Strict-Transport-Security' header
-// This header tells the browser not to use the HTTP version of a site and to stay on the HTTPS version.
-// This will last for the length of time specified in maxAge.
-// HTTPS encrypts the data sent from server to browser adn vice-versa.
+
+// The features we have enabled so far are included in the basic package and can be included with one line.
+// `app.use(helmet())`
+// Remove the helmet features enabled so far and use this shorter form.

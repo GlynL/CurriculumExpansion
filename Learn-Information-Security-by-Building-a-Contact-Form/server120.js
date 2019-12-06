@@ -19,8 +19,7 @@ app.use(helmet(helmetConfig));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
-// serves html file at `/` route
+app.get("/", (req, res) => {});
 
-// Now setup a post route at `/contact` which will listen for a message and `console.log` the message
-// The message will included in the body of the request as 'message'
+// We can respond with a static file by using the 'res.sendFile()' function and passing in the path of file.
+// Don't pass a path as an argument yet.

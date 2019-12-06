@@ -17,6 +17,7 @@ const helmetConfig = {
 app.use(helmet(helmetConfig));
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+// Now our application can receive the body of the post request.
 
-// We also need one more middleware to receive our messages correctly.
-// Configure the server to use `express.json`
+// Next setup the server to listen for requests at the root '/'.

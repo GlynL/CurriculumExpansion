@@ -17,6 +17,11 @@ const helmetConfig = {
 app.use(helmet(helmetConfig));
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-// We also need one more middleware to receive our messages correctly.
-// Configure the server to use `express.json`
+app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
+
+// Now setup a post route at `/contact` which will listen for a message and `console.log` the message
+// The message will included in the body of the request as 'message'
+
+// https://github.com/freeCodeCamp/CurriculumExpansion/pull/212
